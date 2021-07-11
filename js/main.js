@@ -1,15 +1,11 @@
 const INCOMPLETE_BOOK_SHELF_ID = "incompleteBookshelfList"
 const COMPLETE_BOOK_SHELF_ID = "completeBookshelfList"
 const BOOK_ITEMID = "bookId"
-
-// const incompleteBookShelf = document.getElementById("incompleteBookshelfList")
-// const completeBookShelf = document.getElementById("completeBookshelfList")
 const submitForm = document.getElementById("inputBook")
 const checkBox = document.getElementById("inputBookIsComplete")
 const searchBookInput = document.forms["searchBook"]
 
 searchBookInput.addEventListener("keyup", searchBook)
-
 
 let clicked = 0
 
@@ -33,8 +29,6 @@ document.addEventListener("DOMContentLoaded", function(){
     submitForm.addEventListener("submit", function(event){
         addToBookShelf()
         event.preventDefault();
-        // const editBookTitle = document.getElementById("editBookTitle").value
-        // console.log(editBookTitle)
     })
 
     if(isStorageExist()){
@@ -100,8 +94,6 @@ function containerBookShelf(inputBookTitle, inputBookAuthor, inputBookYear, isCo
         containerButton.append(createCompleteButton(), createDeleteButton(), createEditButton())
         containerBook.append(containerButton)
     }
-        
-    
 
     return containerBook
 }
@@ -252,34 +244,16 @@ function toEditBookForm(element){
         </div>
     </form>
 </section>`
-    console.log(bookTitle)
-
-    // const editBookTitleValue = element.querySelector(".input_edit_book > #editBookTitle")
-    // console.log(editBookTitleValue)
-    
-    console.log(element.parentElement.id === "incompleteBookshelfList")
-    // console.log(a)
-    // console.log(bookTitle)
-    // console.log(bookAuthor)
-    // console.log(bookYear)
-    const form = element.querySelector("#formEditBook")
-    const cancel = element.querySelector("#cancelEdit")
-
-    // document.addEventListener("keydown", my_onkeydown_handler);
 
     cancel.addEventListener("click", function(){
         cancelFormEdit(element, bookTitle, bookAuthor, bookYear)
         element.remove()
     })
 
-    
-
     form.addEventListener("submit", function(){
         addEditedToBookShelf(element)
         element.remove()
     })
-    console.log(form)
-    console.log(cancel)
 }
 
 function createEditButton(){
@@ -311,8 +285,6 @@ function addEditedToBookShelf(element){
 
         incompleteBookShelf.append(bookShelf)
     }
-
-
     updateDataToStorage()
 }
 
@@ -345,14 +317,11 @@ function cancelFormEdit(element, bookTitle, bookAuthor, bookYear){
     }
 }
 
-
-
 function searchBook(event){
     const inputSearchBookToLowerCase = event.target.value.toLowerCase()
     let itemList = document.querySelectorAll(".book_item")
     itemList.forEach((item)=>{
         const bookTitle = item.children[1].children[0].innerText.toLowerCase()
-
         if(bookTitle.indexOf(inputSearchBookToLowerCase) == -1){
             item.style.display = "none"
         }else{
