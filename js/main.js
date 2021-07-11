@@ -221,22 +221,21 @@ function toEditBookForm(element){
     const bookYear= element.querySelector(".book_year > span").innerText
     const bookPosition = findBookIndex(element[BOOK_ITEMID])
     arrayBookShelf.splice(bookPosition, 1)
-
     element.innerHTML = `
 <section class="input_edit book_item">
     <h3>Edit Buku</h3>
     <form id="formEditBook">
         <div class="input_edit_book">
             <label for="editBookTitle" class ="title">Judul</label>
-            <input id="editBookTitle" type="text" value=${bookTitle} required>
+            <input id="editBookTitle" type="text" value="${bookTitle}" required>
         </div>
         <div class="input_edit_book">
             <label for="editBookAuthor" class="author">Penulis</label>
-            <input id="editBookAuthor" type="text" value=${bookAuthor} required>
+            <input id="editBookAuthor" type="text" value="${bookAuthor}" required>
         </div>
         <div class="input_edit_book">
             <label for="editBookYear" class="year">Tahun</label>
-            <input id="editBookYear" type="number" value=${bookYear} required>
+            <input id="editBookYear" type="number" value="${bookYear}" required>
         </div>
         <div class="button_edit">
             <button class = "blue-edit" id="submitEdit" type="submit">Save</button>
