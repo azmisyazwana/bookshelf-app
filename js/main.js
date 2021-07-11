@@ -94,7 +94,7 @@ function containerBookShelf(inputBookTitle, inputBookAuthor, inputBookYear, isCo
         containerButton.append(createCompleteButton(), createDeleteButton(), createEditButton())
         containerBook.append(containerButton)
     }
-
+    
     return containerBook
 }
 
@@ -245,6 +245,9 @@ function toEditBookForm(element){
     </form>
 </section>`
 
+    const form = element.querySelector("#formEditBook")
+    const cancel = element.querySelector("#cancelEdit")
+
     cancel.addEventListener("click", function(){
         cancelFormEdit(element, bookTitle, bookAuthor, bookYear)
         element.remove()
@@ -317,11 +320,14 @@ function cancelFormEdit(element, bookTitle, bookAuthor, bookYear){
     }
 }
 
+
+
 function searchBook(event){
     const inputSearchBookToLowerCase = event.target.value.toLowerCase()
     let itemList = document.querySelectorAll(".book_item")
     itemList.forEach((item)=>{
         const bookTitle = item.children[1].children[0].innerText.toLowerCase()
+
         if(bookTitle.indexOf(inputSearchBookToLowerCase) == -1){
             item.style.display = "none"
         }else{
