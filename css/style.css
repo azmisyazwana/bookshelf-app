@@ -1,0 +1,251 @@
+.header-app{
+    background-color: #A6C4FF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px black;
+
+}
+
+body{
+    margin: 0;
+    font-family: 'Righteous', cursive;
+    background-color: #88F8FF;
+}
+
+.side{
+    display: inline;
+}
+
+
+
+
+.col-left{
+    width: 48%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.col-right{
+    width: 48%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.col-left-bookshelf{
+    width: 40%;
+    display: inline-block;
+}
+
+.col-right-bookshelf{
+    width: 55%;
+    display: inline-block;
+}
+
+.column-left {
+    float: left;
+    width: 30%;
+    border-radius: 15px;
+}
+
+.column-right{
+    float: right;
+    width: 60%;
+    margin-right: 50px;
+}
+
+.round{
+    border-radius: 35px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body > .row{
+    margin-top: 40px;
+}
+
+.input > input{
+    width: 99%;
+    border-top: solid white 1px;
+    border-left: solid white 1px;
+    border-right: solid white 3px;
+    border-bottom: solid white 1px;
+    padding: 5px;
+}
+
+.content-input > h2{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.content, .content-input{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button{
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 15px 5px 15px;
+    font-size: 23px;
+    box-shadow: 3px 3px 5px black;
+
+}
+
+#bookSubmit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 30%;
+}
+
+.input_inline > label{
+    font-size: 23px;
+}
+
+.content > h2{
+    text-align: center;
+    margin-bottom: 10px
+}
+
+#searchBook{
+    text-align: center;
+    margin-top: 25px;
+}
+
+#searchBook > input{
+    width: 50%;
+    padding: 7px;
+    border-top: solid white 1px;
+    border-left: solid white 1px;
+    border-right: solid white 3px;
+    border-bottom: solid white 1px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#searchSubmit{
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.content > .row{
+    margin-top: 20px;
+}
+
+.content{
+    margin-bottom: 30px;
+}
+
+.book_list > h3{
+    text-align: center;
+}
+
+.book_item{
+    margin: 10px 15px 30px 15px;
+    background-color: #A6C4FF;
+    border-radius: 15px;
+    padding: 10px 15px 10px 15px;
+}
+
+.book_item > h3{
+    margin: 0;
+}
+
+.col-left-bookshelf > h3, .col-right-bookshelf > h3{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.col-left-bookshelf > img, .col-right-bookshelf > img{
+    border-radius: 120px;
+    height: 100px;
+}
+
+.column-left > img{
+    border-radius: 30px;
+    height: 200px;
+}
+
+.column-left{
+    text-align: center;
+}
+
+.content-input{
+    margin-bottom: 40px
+}
+
+.action > button{
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.action{
+    text-align: center;
+}
+
+.green{
+    background-color: #2fc00b;
+    color: white;
+    font-family: 'Righteous', cursive;
+}
+
+.red{
+    background-color: #cc1313;
+    color: white;    
+    font-family: 'Righteous', cursive;
+}
+
+.white{
+    background-color: white;
+    color: black;
+    font-family: 'Righteous', cursive;
+}
+
+.input_edit{
+    padding-left: 20px;
+}
+
+.input_edit > h3{
+    text-align: center;
+}
+
+.input_edit_book > input{
+    border-top: solid white 1px;
+    border-left: solid white 1px;
+    border-right: solid white 3px;
+    border-bottom: solid white 1px;
+}
+#editBookTitle{
+    margin-left: 14px;
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+#editBookAuthor{
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+#editBookYear{
+    margin-left: 8px;
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+.button_edit{
+    text-align: center;
+}
+
+.button_edit > button{
+    font-size: 17px;
+    font-family: 'Righteous', cursive;
+}
